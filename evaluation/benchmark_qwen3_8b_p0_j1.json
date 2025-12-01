@@ -1,0 +1,338 @@
+{
+  "model": "qwen3:8b",
+  "use_planner": false,
+  "use_judgement": true,
+  "configuration": "Planner: False, Judgement: True",
+  "total_tests": 31,
+  "successful": 10,
+  "failed": 21,
+  "total_steps": 229,
+  "total_time": 789.3949282169342,
+  "test_results": [
+    {
+      "question": "What is 25 * 8?",
+      "expected": "200",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 16.46,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:24:52.479987"
+    },
+    {
+      "question": "Calculate (100 - 35) * 2",
+      "expected": "130",
+      "final_answer": "We have found the answer to be 130.",
+      "steps": 3,
+      "time": 14.03,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:25:06.508219"
+    },
+    {
+      "question": "What is 2025 - 1961?",
+      "expected": "64",
+      "final_answer": "{\"result\": 64}",
+      "steps": 2,
+      "time": 27.51,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:25:34.026546"
+    },
+    {
+      "question": "When was Obama born?",
+      "expected": "August 4, 1961",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 18.84,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:25:52.867773"
+    },
+    {
+      "question": "When was Trump born?",
+      "expected": "June 14, 1946",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 42.26,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:26:35.129628"
+    },
+    {
+      "question": "What is the user's city?",
+      "expected": "Chengdu",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 18.59,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:26:53.716076"
+    },
+    {
+      "question": "When was Python released?",
+      "expected": "February 20, 1991",
+      "final_answer": "People started using Python on February 20, 1991.",
+      "steps": 5,
+      "time": 27.28,
+      "correct": true,
+      "type": "search",
+      "timestamp": "2025-11-30T20:27:20.995782"
+    },
+    {
+      "question": "How much older is Trump than Obama?",
+      "expected": "15",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 26.93,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:27:47.930193"
+    },
+    {
+      "question": "What is Obama's age in 2025?",
+      "expected": "64",
+      "final_answer": "In 2025, Barack Obama would be 64 years old.",
+      "steps": 5,
+      "time": 21.0,
+      "correct": true,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:28:08.929795"
+    },
+    {
+      "question": "What is Trump's age in 2025?",
+      "expected": "79",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 23.84,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:28:32.770464"
+    },
+    {
+      "question": "Who is older, Obama or Trump?",
+      "expected": "Trump",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 19.7,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:28:52.476405"
+    },
+    {
+      "question": "How many years between Obama and Trump's birth?",
+      "expected": "15",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 18.07,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:29:10.543625"
+    },
+    {
+      "question": "What cities are near Guangzhou?",
+      "expected": [
+        "Foshan",
+        "Shenzhen",
+        "Dongguan"
+      ],
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 17.21,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:29:27.752127"
+    },
+    {
+      "question": "What cities are near Chengdu?",
+      "expected": [
+        "Leshan",
+        "Emeishan",
+        "Dujiangyan"
+      ],
+      "final_answer": "Leshan, Emeishan, and Dujiangyan are cities near Chengdu. However, there is no evidence to suggest that any of these cities have notable natural hot springs.",
+      "steps": 8,
+      "time": 30.28,
+      "correct": true,
+      "type": "search",
+      "timestamp": "2025-11-30T20:29:58.034039"
+    },
+    {
+      "question": "What is the weather in New York?",
+      "expected": "weather_data",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 90.1,
+      "correct": false,
+      "type": "weather",
+      "timestamp": "2025-11-30T20:31:28.134764"
+    },
+    {
+      "question": "What is the weather in London?",
+      "expected": "weather_data",
+      "error": "Cannot connect to host wttr.in:443 ssl:default [Connect call failed ('5.9.243.187', 443)]",
+      "time": 100.0,
+      "correct": false,
+      "type": "weather",
+      "timestamp": "2025-11-30T20:33:08.133776"
+    },
+    {
+      "question": "What's the weather in Guangzhou and what cities are nearby?",
+      "expected": null,
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 55.25,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T20:34:03.385866"
+    },
+    {
+      "question": "Calculate Obama's age and tell me the weather in his birthplace",
+      "expected": null,
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 42.49,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T20:34:45.877506"
+    },
+    {
+      "question": "What is (50 + 30) / 4?",
+      "expected": "20",
+      "final_answer": "{\"value\": 20.0}",
+      "steps": 4,
+      "time": 17.01,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:35:02.893836"
+    },
+    {
+      "question": "Calculate 15 * 3 + 10",
+      "expected": "55",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 22.27,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:35:25.164340"
+    },
+    {
+      "question": "What is the hotel price per night?",
+      "expected": "600 CNY",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 19.41,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:35:44.575564"
+    },
+    {
+      "question": "What are the recommended destinations?",
+      "expected": [
+        "Foshan",
+        "Shenzhen",
+        "Dongguan"
+      ],
+      "error": "Cannot connect to host wttr.in:443 ssl:default [Connect call failed ('5.9.243.187', 443)]",
+      "time": 24.2,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T20:36:08.776377"
+    },
+    {
+      "question": "What is 0 * 100?",
+      "expected": "0",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 13.29,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:36:22.069636"
+    },
+    {
+      "question": "Calculate 100 / 4",
+      "expected": "25",
+      "final_answer": "The result of 100 divided by 4 is 25.0",
+      "steps": 3,
+      "time": 21.16,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:36:43.236149"
+    },
+    {
+      "question": "What is 10 ** 2?",
+      "expected": "100",
+      "final_answer": "{\"value\": 100}",
+      "steps": 2,
+      "time": 18.09,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:37:01.324712"
+    },
+    {
+      "question": "If Obama was born in 1961 and Trump in 1946, what's the sum of their birth years?",
+      "expected": "3907",
+      "final_answer": "3907",
+      "steps": 4,
+      "time": 22.13,
+      "correct": true,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:37:23.460913"
+    },
+    {
+      "question": "Calculate the difference between 2025 and Obama's birth year",
+      "expected": "64",
+      "final_answer": "{\"answer\": 64}",
+      "steps": 3,
+      "time": 30.1,
+      "correct": true,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:37:53.565125"
+    },
+    {
+      "question": "Plan a 3-day trip from Chengdu",
+      "expected": "plan",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 55.99,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T20:38:49.557951"
+    },
+    {
+      "question": "What's the weather for a weekend trip to Guangzhou?",
+      "expected": "weather_data",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 24.48,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T20:39:14.057275"
+    },
+    {
+      "question": "How old will Trump be in 2030?",
+      "expected": "84",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 19.71,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T20:39:33.768202"
+    },
+    {
+      "question": "What is the total cost for 3 nights at a hotel?",
+      "expected": "1800",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 15.91,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T20:39:49.699897"
+    }
+  ],
+  "started_at": "2025-11-30T20:24:36.006988",
+  "success_rate": 32.25806451612903,
+  "avg_steps": 7.387096774193548,
+  "avg_time": 25.46435252312691,
+  "completed_at": "2025-11-30T20:39:49.705335"
+}

@@ -1,0 +1,338 @@
+{
+  "model": "gemma3:4b",
+  "use_planner": false,
+  "use_judgement": true,
+  "configuration": "Planner: False, Judgement: True",
+  "total_tests": 31,
+  "successful": 12,
+  "failed": 19,
+  "total_steps": 217,
+  "total_time": 783.2150595188141,
+  "test_results": [
+    {
+      "question": "What is 25 * 8?",
+      "expected": "200",
+      "final_answer": "{\"result\": 200}",
+      "steps": 3,
+      "time": 16.79,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:13:32.047523"
+    },
+    {
+      "question": "Calculate (100 - 35) * 2",
+      "expected": "130",
+      "final_answer": "That's correct! The final answer is indeed 130.",
+      "steps": 3,
+      "time": 34.11,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:14:06.160863"
+    },
+    {
+      "question": "What is 2025 - 1961?",
+      "expected": "64",
+      "final_answer": "64",
+      "steps": 6,
+      "time": 33.35,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:14:39.513727"
+    },
+    {
+      "question": "When was Obama born?",
+      "expected": "August 4, 1961",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 16.36,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:14:55.870923"
+    },
+    {
+      "question": "When was Trump born?",
+      "expected": "June 14, 1946",
+      "final_answer": "The birthdate of Donald Trump is June 14, 1946, and his age as of 2025 is 79 years.",
+      "steps": 8,
+      "time": 23.22,
+      "correct": true,
+      "type": "search",
+      "timestamp": "2025-11-30T19:15:19.096528"
+    },
+    {
+      "question": "What is the user's city?",
+      "expected": "Chengdu",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 26.73,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:15:45.829096"
+    },
+    {
+      "question": "When was Python released?",
+      "expected": "February 20, 1991",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 39.04,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:16:24.873947"
+    },
+    {
+      "question": "How much older is Trump than Obama?",
+      "expected": "15",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 17.82,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:16:42.698634"
+    },
+    {
+      "question": "What is Obama's age in 2025?",
+      "expected": "64",
+      "final_answer": "Barack Obama is 64 years old in 2025.",
+      "steps": 5,
+      "time": 19.62,
+      "correct": true,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:17:02.316714"
+    },
+    {
+      "question": "What is Trump's age in 2025?",
+      "expected": "79",
+      "final_answer": "Donald Trump will be 79 years old in 2025.",
+      "steps": 3,
+      "time": 19.98,
+      "correct": true,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:17:22.296528"
+    },
+    {
+      "question": "Who is older, Obama or Trump?",
+      "expected": "Trump",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 23.04,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:17:45.336884"
+    },
+    {
+      "question": "How many years between Obama and Trump's birth?",
+      "expected": "15",
+      "final_answer": "a",
+      "steps": 5,
+      "time": 20.47,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:18:05.808608"
+    },
+    {
+      "question": "What cities are near Guangzhou?",
+      "expected": [
+        "Foshan",
+        "Shenzhen",
+        "Dongguan"
+      ],
+      "error": "",
+      "time": 39.42,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:18:45.233075"
+    },
+    {
+      "question": "What cities are near Chengdu?",
+      "expected": [
+        "Leshan",
+        "Emeishan",
+        "Dujiangyan"
+      ],
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 17.99,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:19:03.229894"
+    },
+    {
+      "question": "What is the weather in New York?",
+      "expected": "weather_data",
+      "error": "Cannot connect to host wttr.in:443 ssl:default [Connect call failed ('5.9.243.187', 443)]",
+      "time": 58.53,
+      "correct": false,
+      "type": "weather",
+      "timestamp": "2025-11-30T19:20:01.759919"
+    },
+    {
+      "question": "What is the weather in London?",
+      "expected": "weather_data",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 57.48,
+      "correct": false,
+      "type": "weather",
+      "timestamp": "2025-11-30T19:20:59.243843"
+    },
+    {
+      "question": "What's the weather in Guangzhou and what cities are nearby?",
+      "expected": null,
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 91.15,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T19:22:30.396533"
+    },
+    {
+      "question": "Calculate Obama's age and tell me the weather in his birthplace",
+      "expected": null,
+      "final_answer": "{\"age\":64,\"weather\":[{\"date\":\"2025-11-30\",\"temperature\":74},{\"date\":\"2025-12-01\",\"temperature\":74},{\"date\":\"2025-12-02\",\"temperature\":74}]}",
+      "steps": 4,
+      "time": 28.5,
+      "correct": true,
+      "type": "complex",
+      "timestamp": "2025-11-30T19:22:58.897640"
+    },
+    {
+      "question": "What is (50 + 30) / 4?",
+      "expected": "20",
+      "final_answer": "{\"result\": 20.0}",
+      "steps": 4,
+      "time": 20.69,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:23:19.590607"
+    },
+    {
+      "question": "Calculate 15 * 3 + 10",
+      "expected": "55",
+      "final_answer": "This calculation can be simplified to just (15 * 3) + 10, which equals 55.",
+      "steps": 6,
+      "time": 23.86,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:23:43.452583"
+    },
+    {
+      "question": "What is the hotel price per night?",
+      "expected": "600 CNY",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 20.92,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:24:04.371195"
+    },
+    {
+      "question": "What are the recommended destinations?",
+      "expected": [
+        "Foshan",
+        "Shenzhen",
+        "Dongguan"
+      ],
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 18.38,
+      "correct": false,
+      "type": "search",
+      "timestamp": "2025-11-30T19:24:22.752861"
+    },
+    {
+      "question": "What is 0 * 100?",
+      "expected": "0",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 10.75,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:24:33.500614"
+    },
+    {
+      "question": "Calculate 100 / 4",
+      "expected": "25",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 12.35,
+      "correct": false,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:24:45.852711"
+    },
+    {
+      "question": "What is 10 ** 2?",
+      "expected": "100",
+      "final_answer": "That is 100.",
+      "steps": 2,
+      "time": 12.34,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:24:58.192563"
+    },
+    {
+      "question": "If Obama was born in 1961 and Trump in 1946, what's the sum of their birth years?",
+      "expected": "3907",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 44.7,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:25:42.897993"
+    },
+    {
+      "question": "Calculate the difference between 2025 and Obama's birth year",
+      "expected": "64",
+      "final_answer": "Now I can compute the final answer.",
+      "steps": 5,
+      "time": 18.21,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:26:01.108955"
+    },
+    {
+      "question": "Plan a 3-day trip from Chengdu",
+      "expected": "plan",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 34.93,
+      "correct": false,
+      "type": "complex",
+      "timestamp": "2025-11-30T19:26:36.041162"
+    },
+    {
+      "question": "What's the weather for a weekend trip to Guangzhou?",
+      "expected": "weather_data",
+      "final_answer": "The weather forecast for Guangzhou is as follows:\nDate: 2025-11-30; Temperature: 72 degree Fahrenheit\nDate: 2025-12-01; Temperature: 77 degree Fahrenheit\nDate: 2025-12-02; Temperature: 76 degree Fahrenheit",
+      "steps": 6,
+      "time": 37.49,
+      "correct": true,
+      "type": "complex",
+      "timestamp": "2025-11-30T19:27:13.531759"
+    },
+    {
+      "question": "How old will Trump be in 2030?",
+      "expected": "84",
+      "final_answer": "Timed out",
+      "steps": 10,
+      "time": 21.14,
+      "correct": false,
+      "type": "multi",
+      "timestamp": "2025-11-30T19:27:34.671049"
+    },
+    {
+      "question": "What is the total cost for 3 nights at a hotel?",
+      "expected": "1800",
+      "final_answer": "{\"total_cost\": 1800}",
+      "steps": 7,
+      "time": 21.78,
+      "correct": true,
+      "type": "calc",
+      "timestamp": "2025-11-30T19:27:56.454162"
+    }
+  ],
+  "started_at": "2025-11-30T19:13:15.251006",
+  "success_rate": 38.70967741935484,
+  "avg_steps": 7.0,
+  "avg_time": 25.265001919961744,
+  "completed_at": "2025-11-30T19:27:56.455757"
+}
