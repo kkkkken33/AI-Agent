@@ -30,6 +30,10 @@
   <p align="center">
     The final project of course AIAA3102 (L02) - Python Programming for Artificial Intelligence
   </p>
+
+  <p align="center">
+    Github code: https://github.com/kkkkken33/AI-Agent
+  </p>
 </div>
 
 
@@ -99,14 +103,28 @@ This architecture enables the system to handle diverse queries ranging from fact
 
 <!-- GETTING STARTED -->
 ## Getting Started
+## 🚀 Running on Google Colab
 
+Using this project in **Google Colab** is super easy!  
+Just open **`Ollama_Setup.ipynb`** and click **“Run all”** — that’s it!
+
+The notebook will automatically:
+
+- install Ollama  
+- start the Ollama server  
+- download the required model  
+- set up everything for you  
+
+Once it finishes, you're ready to use the agent directly in Colab. Enjoy! 😊
+
+## 🚀 Running on Local Device
 To set up the ReAct Agent locally, follow these steps to configure the environment and install dependencies.
 
 ### Prerequisites
 
 Ensure you have the following installed on your system:
 
-* **Python 3.8+**
+* **Python <=3.11.9**
   ```sh
   python --version
   ```
@@ -129,8 +147,8 @@ Ensure you have the following installed on your system:
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your_username/react-agent.git
-   cd react-agent
+   git clone https://github.com/kkkkken33/AI-Agent.git
+   cd AI-Agent
    ```
 
 2. **Create a virtual environment** (recommended)
@@ -152,15 +170,21 @@ Ensure you have the following installed on your system:
    - `pydantic` - Data validation
    - `pyyaml` - Configuration management
    - `python-weather` - Weather data
+   - `wikipedia` - Wikipedia search tool
    - `wikipedia-api` - Knowledge base access
+
+   If you could not install wikipedia-api due to python version, use
+   ```sh
+   pip install git+https://github.com/martin-majlis/Wikipedia-API.git
+   ```
 
 4. **Configure the agent**
    
    Edit `config.yaml` to customize model parameters and tool settings:
    ```yaml
    model:
-     agent_model_name: "llama3"
-     temperature: 0.2
+     agent_model_name: "llama3.1:8b"
+     temperature: 0.7
    
    agent:
      max_steps: 10
@@ -399,11 +423,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Top contributors:
-
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
-</a>
 
 
 
@@ -416,15 +435,6 @@ Chang XU - cxu475@connect.hkust-gz.edu.cn
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
