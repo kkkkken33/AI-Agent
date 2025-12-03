@@ -79,7 +79,7 @@ The agent follows the ReAct paradigm where each iteration consists of:
 1. **Thought** - Reasoning about what information is needed
 2. **Action** - Executing a tool to gather that information  
 3. **Observation** - Processing the tool's output
-4. **Answer** - Providing the final response when sufficient information is collected
+4. **Final Answer** - Providing the final response when sufficient information is collected
 
 This architecture enables the system to handle diverse queries ranging from factual lookups to multi-step calculations while maintaining security and reliability through built-in safeguards.
 
@@ -338,9 +338,24 @@ Action: calc("mathematical expression")
 - Exponentiation: `**`
 - Parentheses for grouping
 - Multiple operations in one expression
+- Safe function calls:
+  - `abs(x)`: Absolute value
+  - `round(x, n)`: Round `x` to `n` decimal places
+  - `min(x1, x2, ...)`: Minimum value
+  - `max(x1, x2, ...)`: Maximum value
+  - `sum(iterable)`: Sum of all elements in an iterable
 
 **Example:**
 ```
+Action: calc("abs(1946 - 1961)")
+Observation: 15
+
+Action: calc("max(10, 20, 5)")
+Observation: 20
+
+Action: calc("round(3.14159, 2)")
+Observation: 3.14
+
 Action: calc("(2025 - 1961) + (2025 - 1946)")
 Observation: 143
 ```

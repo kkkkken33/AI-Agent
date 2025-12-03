@@ -21,6 +21,7 @@ cfg = load_config()
 MAKCORPS_API_KEY = cfg["api"]["MAKCORPS_API_KEY"]
 use_wikipedia_search = cfg["tools"]["use_wikipedia_search"]
 use_internet_search = cfg["tools"]["use_internet_search"]
+wiki_user_agent = cfg["tools"]["wiki_user_agent"]
 
 # 1. Setup Knowledge Base (Matching the Slide's Facts)
 knowledge_base = {
@@ -41,7 +42,7 @@ knowledge_base = {
 }
 
 # 2. Define Tools
-def search_tool(query, use_internet=use_internet_search, use_wikipedia=use_wikipedia_search):
+def search_tool(query, use_internet=use_internet_search, use_wikipedia=use_wikipedia_search, wiki_user_agent=wiki_user_agent):
     query = query.lower().replace('"', '').strip()
     print(f"   [System] Searching for: '{query}'")
     # Simple fuzzy match
@@ -63,7 +64,7 @@ def search_tool(query, use_internet=use_internet_search, use_wikipedia=use_wikip
                 print(f"[DEBUG] Fetching Wikipedia page for: {results[0]}")
                 wiki = wikipediaapi.Wikipedia(
                     language='en',
-                    user_agent='HWAI-SearchAgent-Bot/0.1 (contact: cxu475@connect.hkust-gz.edu.cn)'
+                    user_agent=wiki_user_agent
                 )
                 page = wiki.page(results[0])
                 return page.summary[:500]
