@@ -21,7 +21,7 @@ cfg = load_config()
 MAKCORPS_API_KEY = cfg["api"]["MAKCORPS_API_KEY"]
 use_wikipedia_search = cfg["tools"]["use_wikipedia_search"]
 use_internet_search = cfg["tools"]["use_internet_search"]
-wiki_user_agent = cfg["tools"]["wiki_user_agent"]
+wiki_user_agent = cfg["api"]["wiki_user_agent"]
 
 # 1. Setup Knowledge Base (Matching the Slide's Facts)
 knowledge_base = {
