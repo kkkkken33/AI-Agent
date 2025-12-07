@@ -27,9 +27,6 @@
 
 <h3 align="center">Final Project</h3>
 
-  <p align="center">
-    The final project of course AIAA3102 (L02) - Python Programming for Artificial Intelligence
-  </p>
 
   <p align="center">
     Github code: https://github.com/kkkkken33/AI-Agent
@@ -67,7 +64,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project implements a **ReAct (Reasoning and Acting) Agent** framework that combines large language models with external tools to answer complex queries through iterative reasoning and action execution. Built as the Final Project B for AIAA3102 - Python Programming for Artificial Intelligence, it demonstrates advanced AI agent design patterns including:
+This project implements a **ReAct (Reasoning and Acting) Agent** framework that combines large language models with external tools to answer complex queries through iterative reasoning and action execution. The codes demonstrates advanced AI agent design patterns including:
 
 * **Multi-step Reasoning**: The agent breaks down complex questions into logical steps using chain-of-thought prompting
 * **Tool Integration**: Seamlessly connects to search engines, calculators, weather APIs, and knowledge bases
