@@ -58,7 +58,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#bill-of-materials">Bill of Materials</a></li>
   </ol>
 </details>
 
@@ -156,8 +156,6 @@ Ensure you have the following installed on your system:
    python -m venv venv
    # On Windows
    venv\Scripts\activate
-   # On macOS/Linux
-   source venv/bin/activate
    ```
 
 3. **Install required packages**
@@ -427,6 +425,21 @@ To add a new tool:
 Chang XU - cxu475@connect.hkust-gz.edu.cn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- BILL OF MATERIALS -->
+## Bill of Materials
+
+For a complete list of all open-source libraries, pretrained models, and resources used in this project, please refer to the **[Bill of Materials](Bill_of_Materials.md)**.
+
+This document includes:
+- Core dependencies and their licenses
+- Pretrained model citations
+- External APIs and tools
+- Compliance information
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
