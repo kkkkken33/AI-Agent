@@ -80,6 +80,8 @@ The agent follows the ReAct paradigm where each iteration consists of:
 
 This architecture enables the system to handle diverse queries ranging from factual lookups to multi-step calculations while maintaining security and reliability through built-in safeguards.
 
+For **security practical application experiment**, the codes are available at `security_benchmark.py`, and test results are available at `./evaluation/security_test_results_20251201_110551.json`.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
